@@ -1,4 +1,3 @@
-source "http://gems.mobme.in"
 source :rubygems
 
 group :development do
@@ -14,6 +13,15 @@ group :development do
   gem "rdiscount"
 end
 
+
+group :test do
+  gem 'webmock'
+  gem 'vcr'
+  gem 'turn'
+  gem 'rake'
+  gem 'minitest'
+end
+
 group :osx do
   gem "growl"
 end
@@ -22,6 +30,8 @@ group :linux do
   gem "rb-inotify"
   gem "libnotify"
 end
+
+gem 'httparty'
 
 # Put your project specific gems outside development group
 #
