@@ -32,7 +32,7 @@ group :linux do
 end
 
 gem 'httparty'
-
+gem 'active_support'
 # Put your project specific gems outside development group
 #
 # gem "activerecord"
