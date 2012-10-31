@@ -25,5 +25,14 @@ describe MultiShorten::Client do
 		end
 	end
 
+
+	describe "#multiple" do
+		it "should return shortened urls for each of the specified apis" do
+			MultiShorten::B54.stub(:shorten).with("http://www.google.com").and_return({:status => :success, :short_url => "http://b54.in/9o"})
+			MultiShorten::QrCx.stub(:shorten).with("http://www.google.com").and_return({:status => :success, :short_url => "http://qr.cx/9o"})
+			subject.send(:multiple, ["b54", "qr_cx"], "http://www.google.com").should == { "qr_cx"=>{:status=>:success, :short_url=>"http://qr.cx/9o"}, "b54"=>{:status=>:success, :short_url=>"http://b54.in/9o}
+		end
+	end
+
 end
 

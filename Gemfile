@@ -8,7 +8,6 @@ group :development do
   gem "simplecov"
   gem "flog"
   gem "yard"
-  gem "ci_reporter"
   gem "simplecov-rcov"
   gem "rdiscount"
 end
