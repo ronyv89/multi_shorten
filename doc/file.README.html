@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>README</h1>
+
+<p>Use multiple url shorteners with a single gem</p>
+
+<h2>Install</h2>
+
+<p><code>gem install multi_shorten</code></p>
+
+<h2>Usage</h2>
+
+<p><code>
+require 'multi_shorten'
+client = MultiShorten::Client.new
+</code>
+<b>For single shortener apis</b>
+<code>
+client.shorten({:mode => "single", :url => "<a href="http://www.google.com">http://www.google.com</a>", :shortener => "b54"})
+</code></p>
+
+<p><b>Sample response for this request</b>
+<code>
+{:status => :success, :short_url => "<a href="http://b54.in/9o">http://b54.in/9o</a>"}
+</code></p>
+
+<p><b>For multiple apis</b>
+<code>
+client.shorten({:mode => "multiple", :url => "<a href="http://www.google.com">http://www.google.com</a>", :shorteners => ["b54", "qr_cx"]})
+</code></p>
+
+<p><b>Sample response for this request </b>
+<code>
+{"b54" => {:status => :fail }, "qr_cx" => {:status => :success, :short_url => "<a href="http://qr.cx/9o">http://qr.cx/9o</a>"}}
+</code></p>
+
+<h2>Available Shortener Codes</h2>
+
+<p><a href="http://b54.in">b54</a>
+<a href="http://linkee.com">linkee</a>
+<a href="http://goo.gl">goo_gl</a>
+<a href="htpp://is.gd">is_gd</a>
+<a href="http://jmb.tw/">jumbo_tweet</a>
+<a href="http://metamark.net">meta_mark</a>
+<a href="http://mtny.mobi" title="">mt_ny</a>
+<a href="http://qr.cx">qr_cx</a>
+<a href="http://shortr.info">shortr</a></p>
+
+<p>Use the above codes to shorten your urls with the respective service</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Wed Oct 31 12:47:16 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

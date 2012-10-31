@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Rony Varghese"]
   s.email       = 'ronyv250289@gmail.com'
   s.files       = ["lib/multi_shorten/client.rb", "lib/multi_shorten/url_shorteners.rb", "lib/multi_shorten.rb", "README.md"]
-  s.homepage    = 'http://rubygems.org/gems/multi_shorten'
+  s.homepage    = 'https://github.com/ronyv89/multi_shorten'
   s.add_dependency 'httparty'
   s.add_dependency 'active_support'
 end
