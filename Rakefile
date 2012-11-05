@@ -28,6 +28,3 @@ task :flog do
     raise "#{ bad_methods.size } methods have a flog complexity > #{ threshold }"
   end
 end
-
-
-end
